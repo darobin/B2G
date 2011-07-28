@@ -17,7 +17,8 @@ APPS:
         time-of-day based list of mailboxes, etc. All these components are simply autonomous web pages. The
         integration comes from a notion that is core throughout the system's UI: split screens. You can configure
         a screen to run n apps, and places those apps in clear areas of it. You can move them around and change them.
-        System-wide panes exist as well, they may appear on demand.
+        System-wide panes exist as well, they may appear on demand. Components can communicate with one another
+        through intents.
 
     - things that suck
         - file system browsers
@@ -25,4 +26,17 @@ APPS:
         - IRC clients
         - office suites (this can be covered by Wocuments, though)
 
+APIs:
+    - make a clear, usage-based exposition of the way in which Introducer, Intents, and Discovery can all
+      work together (or be merged). Include reverse discovery. The latter may be an intent that just happens
+      to broadcast its availability over the local network (with a minimalistic intents protocol).
+    - define different security approaches, and describe the various existing solutions or proposal in this
+      space, irrespective of whether they seem desirable or not (if only so that everyone can share the same
+      vocabulary)
+    - draw the line between services that ought to have an HTTP interface, and those that require an API. A lot
+      of this has to do with events and DOM integration. Also describe when exposing new functionality as a
+      new input type makes sense, and when it doesn't.
+    - for the HTTP interfaces, the question of whether to prefer REST or JSON-RPC is well worth asking, and
+      should not be taken lightly or religiously. A lot of things don't necessarily fit as well into the REST
+      model as one might expect.
 
