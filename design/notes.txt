@@ -1,0 +1,28 @@
+
+APPS:
+    - use common problems noted with existing apps and see how to use the solutions in order to design a
+      better platform
+    - Mail client
+        Problem: all mail clients suck, despite having great ideas in places. The problem is that they all do
+        many things that one does not need, and those get in the way. They also do things wrong here and there,
+        and those are not configurable or replaceable (at least not easily enough). The exception is really
+        simple clients, in which case the problem becomes that they lack features one needs. This features for
+        all vs features for a specific user mismatch is almost universal. Add-ons can help up to a point but
+        they are hard to get right, especially when they involve a lot of UI (they work well with browsers
+        because most of the real estate is dedicated to the page anyway).
+
+        Solution: a common service that implements email fetching, email sending, and mailbox management for
+        the entire system. Atop that, as many UIs as one wants, interacting with it using simple APIs. You can
+        write the perfect filter system, the best thread management UI, the best message viewer, a project or
+        time-of-day based list of mailboxes, etc. All these components are simply autonomous web pages. The
+        integration comes from a notion that is core throughout the system's UI: split screens. You can configure
+        a screen to run n apps, and places those apps in clear areas of it. You can move them around and change them.
+        System-wide panes exist as well, they may appear on demand.
+
+    - things that suck
+        - file system browsers
+        - twitter clients
+        - IRC clients
+        - office suites (this can be covered by Wocuments, though)
+
+
